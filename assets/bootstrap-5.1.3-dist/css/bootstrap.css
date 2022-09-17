@@ -3009,14 +3009,15 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  color: rgb(53, 53, 53);
+  font-weight: bolder;
+  background-color: #EB8FA9;
+  border-color: #f7d0db;
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  color: #303030;
+  background-color: #f7d0db;
+  border-color: #f7d0db;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
