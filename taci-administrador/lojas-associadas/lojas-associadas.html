@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lojistas Associados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/bootstrap-5.1.3-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap-personalizado.css" />
+
+<body>
+
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../lojas-associadas/lojas-associadas.html">
+                    <img src="../../assets/img/logo-taci-menor.png" class="rounded float-start" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../lojas-associadas/lojas-associadas.html">Lojistas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../aprendizados/home-aprendizado.html">Aprendizados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../dicas-produtos/dicas-produtos-adm.html">Dicas e produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../bonificacoes-aprendizado/home-bonificacao.html">Bonificações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../faq/faq.html">Lojistas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Logout</a>
+                        </li>
+                    </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <h1>Lojas Associadas</h1>
+        <input type="search" class="input-search-box" placeholder="Pesquisar Lojas">
+        <div class="add-button-wrapper">
+            <button class="add-button"><a href="./add-novaloja.html"><i class="fas fa-plus-circle"></i>Adicionar
+                    Lojista</a></button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="../../assets/img/loja-ex2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Loja victoria sanches</h5>
+                        <p class="card-text">vendas: 999 unidades</p>
+                        <p class="card-text">cursos: 15</p>
+                        <a href="#" class="btn btn-primary">Visualizar loja</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="../../assets/img/loja-ex.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Loja victoria sanches</h5>
+                        <p class="card-text">vendas: 999 unidades</p>
+                        <p class="card-text">cursos: 15</p>
+                        <a href="#" class="btn btn-primary">Visualizar loja</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="../../assets/img/loja-ex3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Loja victoria sanches</h5>
+                        <p class="card-text">vendas: 999 unidades</p>
+                        <p class="card-text">cursos: 15</p>
+                        <a href="#" class="btn btn-primary">Visualizar loja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fundo" onclick="fecharModal()"></div>
+        <div id="modal" class="modal">
+            <div class="texto-aviso">
+                <p>Você tem certeza que deseja deletar esta loja?</p>
+            </div>
+            <div class="modal__btns-wrapper">
+                <button class="modal__btn-secondary" onclick="fecharModal()">Não</button>
+                <button class="modal__btn-primary" onclick="modalConfirmacao()">Sim</button>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="texto-aviso">
+                <p>Esta loja será deletada, confirme a senha para continuar</p>
+            </div>
+            <input class="input-passw-box" type="password" name="senha" placeholder="********">
+            <div class="modal__btns-wrapper">
+                <button class="modal__btn-secondary" onclick="fecharModal()">Voltar</button>
+                <button class="modal__btn-primary" onclick="modalConclusao()">OK</button>
+            </div>
+        </div>
+        <div id="modal3" class="modal" onclick="fecharModal()">
+            <div class="texto-aviso">
+                <p>Loja deletada com sucesso!</p>
+            </div>
+            <i class="fas fa-check-circle"></i>
+        </div>
+    </section>
+    <footer>
+        <div class="marca-wrapper">
+            <p>Powered by C4NGAÇO SYSTEMS</p>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script type="text/javascript" src="../../assets/js/geral.js"></script>
+
+</body>
+
+</html>

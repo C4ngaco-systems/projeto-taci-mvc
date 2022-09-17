@@ -1,0 +1,739 @@
+/* ---------- SPAN BOX ---------- */
+
+.span-box {
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 220px;
+    height: fit-content;
+    padding: 1rem 1rem;
+    background-color: var(--cor-background-clara);
+    text-align: center;
+    border-radius: 5px;
+    border: #414141 solid 2px;
+    box-shadow: var(--bs);
+}
+
+.span-box>h2 {
+    padding: 0;
+    margin: 0 0 1rem;
+    font-size: 18px;
+}
+
+
+/* span box edicao */
+
+#box-edicao {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 600px;
+    width: 50%;
+    background: rgba(100, 100, 100, .5);
+    margin-top: 130px;
+    margin-left: 0%;
+}
+
+.box-edicao__wrappers {
+    display: grid;
+    grid-template-rows: 1fr 1fr 6fr;
+    gap: 1em;
+    margin-bottom: 1em;
+    font-size: 10px;
+}
+
+/* ---------- BOTÕES ---------- */
+
+
+/* todo <a> dentro de qualquer botão */
+
+button>a {
+    text-decoration: none;
+}
+
+form>a {
+    text-decoration: none;
+}
+
+button>a:visited,
+button>a:link {
+    color: inherit;
+}
+
+
+/* botão call to action */
+
+.cta-button {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--cor-principal);
+    border: 2px var(--cor-principal) solid;
+    border-radius: 6px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.cta-login {
+    color: var(--cor-escura);
+    background-color: var(--cor-principal);
+    cursor: pointer;
+}
+
+.next-cancel-button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    Width: fit-content;
+    /*adicionado*/
+    margin: 0 auto;
+    /*adicionado*/
+    margin-top: auto;
+}
+
+
+/* botão positivo */
+
+.next-button {
+    font-size: 16px;
+    min-width: 90px;
+    padding: .7rem;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: var(--bs);
+    background-color: var(--cor-principal);
+    color: var(--cor-escura);
+    /* margin adicionada*/
+}
+
+.next-button:hover {
+    font-weight: 750;
+}
+
+.back-button {
+    font-size: 16px;
+    min-width: 90px;
+    padding: .7rem;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: var(--bs);
+    color: var(--cor-escura);
+    /* margin adicionada*/
+}
+
+/* botão negativo */
+
+.cancel-button {
+    font-size: 16px;
+    width: 90px;
+    padding: .7rem;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: var(--bs);
+}
+
+
+/* botão adicionar */
+
+.add-button-wrapper {
+    margin: .5rem;
+    display: flex;
+}
+
+.add-button {
+    border: 0;
+    background: transparent;
+    font-size: 1.5em;
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+.add-button>a>i {
+    font-size: 22px;
+    margin-right: 0.3rem;
+}
+
+.button-ranking>.add-button-wrapper> {
+    border: 0rem;
+    background-color: var(--cor-background-clara);
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    display: flex;
+    height: fit-content;
+}
+
+.button-ranking {
+    border: 0;
+    background-color: var(--cor-background-clara);
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+}
+
+
+/*botão upload de arquivos*/
+
+.upload-button-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.button-upload {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    transition: 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.span_box__upload {
+    width: 250px;
+    height: fit-content;
+    padding-left: 0%;
+    background-color: var(--cor-background-clara);
+    text-align: center;
+    border-radius: 5px;
+    border: #414141 solid 2px;
+    box-shadow: var(--bs);
+}
+
+.button-upload:hover {
+    transform: scale(1.1);
+}
+
+.button-upload i {
+    font-size: 50px;
+    margin-bottom: 0.1em;
+}
+
+.button-upload span {
+    width: 100%;
+    text-align: center;
+    font-weight: 500px;
+    padding: 3px;
+    background-color: var(--cor-principal);
+    border-radius: 7px;
+}
+
+
+/* card com botão de filtros */
+
+.fechar-button {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    background-color: var(--cor-principal);
+    border-radius: 40px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 10%;
+    margin-left: 90%;
+    margin-top: -20%;
+}
+
+.in-page-nav p {
+    display: inline;
+}
+
+.filtro-button {
+    width: 180px;
+    padding: 0%;
+    margin-right: 50px;
+    margin-bottom: 0.6em;
+    color: var(--cor-background-escura);
+    font-weight: bolder;
+}
+
+
+/* ---------- FORMS ---------- */
+
+
+/* box de senha do span box */
+
+.input-passw-box {
+    height: 1.7em;
+    border-radius: 5px;
+}
+
+
+/* box generica */
+
+.generic-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    min-height: 480px;
+}
+
+.menos-gap {
+    gap: 1em;
+}
+
+.form-faq {
+    display: flex;
+    flex-direction: column;
+}
+
+.generic-form label {
+    font-size: 1em;
+}
+
+.form-faq>label {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.1em;
+}
+
+.input-generic-box {
+    height: 1.9em;
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 0.5em;
+}
+
+
+/* box de pesquisa */
+
+.input-search-box {
+    height: 1.8rem;
+    width: 100%;
+    border-radius: 7px;
+    background-image: url(../img/search-interface-symbol.png);
+    background-position: 0.2rem;
+    background-size: 1.1rem;
+    background-repeat: no-repeat;
+    padding: 0 1.4rem;
+}
+
+
+/* checkbox */
+
+.form-check {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.checkbox-wrapper {
+    margin-bottom: .6em;
+}
+
+.form-check label,
+.form-radio label {
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: .3em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+/* radio button  */
+
+.radio-btns-container {
+    display: flex;
+    gap: 1em;
+}
+
+.radio-btn-wrapper {
+    display: flex;
+    gap: 0.5em
+}
+
+
+/* ----------CARDS ---------- */
+
+.cards {
+    display: grid;
+    gap: 0.7em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.cards-maiores {
+    margin-top: 4.6em;
+    gap: 4em;
+    margin-bottom: 1.5em;
+}
+
+.cards-faq {
+    margin-top: 0.3em;
+    padding: 1em 0;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    max-height: 150px;
+    background-color: var(--cor-clara);
+    border: 2px solid var(--cor-escura);
+    border-radius: 13px;
+    overflow: hidden;
+    height: fit-content;
+    box-shadow: var(--bs);
+}
+
+.card-resumo {
+    overflow-wrap: break-word;
+    flex-direction: column;
+    border-radius: 12px;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    font-weight: bolder;
+    text-align: center;
+    max-height: none;
+}
+
+.card-faq {
+    width: 100%;
+    background-color: var(--cor-clara);
+    border: 2px solid var(--cor-escura);
+    border-radius: 7px;
+    padding: 0.3em 0 0.3em 0.3em;
+    font-size: 1.1em;
+    word-break: normal;
+}
+
+.card__img-wrapper {
+    width: 140px;
+    border-radius: 12px 0 0 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__img-wrapper>i {
+    position: absolute;
+    top: 33%;
+    left: 40%;
+    font-size: 40px;
+    color: var(--cor-background-clara);
+    opacity: 0.6;
+    transition: 200ms;
+}
+
+.card__img-wrapper>i:hover {
+    transform: scale(1.1);
+}
+
+.img-ranking {
+    position: absolute;
+    left: 5em;
+    margin-top: 1em;
+}
+
+.card-section {
+    margin-top: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    display: block;
+    object-fit: cover;
+}
+
+.card__conteudo {
+    position: relative;
+    width: 100%;
+    padding: .5em;
+    font-size: 17px;
+}
+
+.card__conteudo-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card__conteudo p {
+    margin: 0 0 0.4em;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card__titulo {
+    font-style: italic;
+    text-decoration: underline;
+    margin: 0 0 0.5em;
+}
+
+.card__descricao {
+    text-overflow: ellipsis;
+    max-height: 6ch;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.product-summary {
+    float: left;
+    max-width: 80%;
+    margin: 0 20px 5px 0;
+    font-size: .8em;
+}
+
+.product-summary p {
+    display: inline;
+}
+
+
+/*bonificações vendedor*/
+
+.bonification-expiration {
+    float: left;
+    max-width: 80%;
+    margin: 0 20px 5px 0;
+    font-size: .8em;
+}
+
+.bonification-expiration p {
+    display: inline;
+    color: grey;
+}
+
+.bonification-info {
+    float: left;
+    width: 60%;
+    padding: 5px 0 0 5px;
+    font-size: .8em;
+}
+
+.bonification-info p {
+    display: inline;
+}
+
+.bonification-type {
+    float: right;
+    color: grey;
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.edit-del-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.3em 0.5em;
+    font-size: 18px;
+}
+
+.edit-button,
+.del-button {
+    all: unset;
+    cursor: pointer;
+}
+
+.card h2 {
+    margin-top: 1px;
+}
+
+.card-maior {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88%;
+    min-width: 250px;
+    max-width: 500px;
+    height: 30%;
+    min-height: 140px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    text-justify: c;
+    color: var(--cor-principal);
+    border: solid 1px var(--cor-escura);
+    transition: 150ms;
+    box-shadow: var(--box-shadow);
+}
+
+.card-maior:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.card-maior__conteudo {
+    font-size: 1.2em;
+}
+
+.card-maior__link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/* modal JS fundo do span-box */
+
+#fundo {
+    opacity: 0.7;
+    background-color: var(--cor-background-escura);
+    background: var(--cor-escura);
+    filter: blur(0.2em);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min-content;
+    min-width: 200px;
+    text-align: center;
+    background-color: var(--cor-background-clara);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    padding: 1em;
+    z-index: 99;
+    display: none;
+    gap: 1.3em;
+}
+
+#modal1,
+#modal2,
+#modal3 {
+    display: none;
+}
+
+.texto-aviso {
+    text-align: center;
+    font-size: 18px;
+}
+
+.texto-aviso p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.modal__btns-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: .65em;
+}
+
+.modal__btn-primary {
+    background-color: var(--cor-principal);
+    border: 0;
+}
+
+.modal__btn-secondary {
+    background-color: var(--cor-background-clara);
+    border: solid 1px var(--cor-escura)
+}
+.modal__btn-primary,
+.modal__btn-secondary {
+    outline: 0;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.modal i{
+    border: none; 
+    color: green; 
+    font-size: 1.5em;  
+}
+
+
+
+
+/* ajuste caixa de aviso deletar card */
+
+.p-deletar-card {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*Filters*/
+
+.filtersec {
+    width: 100%;
+    margin-top: .2em;
+}
+
+.filtersec button {
+    margin: 4px 0;
+    border-radius: 7px;
+    outline: thin;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filtersec__btn:hover {
+    background-color: var(--cor-principal-fraca);
+}
+
+.filtersec__btn:active {
+    background-color: var(--cor-principal);
+}
+
+
+/*GAMBIARRATION ENQUANTO NÃO TEM JS ONCLICK"*/
+
+.cards>a {
+    color: var(--cor-escura);
+    text-decoration: none;
+    width: 100%;
+}
+
+
+/*nav bar dentro da página*/
+
+.in-page-nav p {
+    display: inline;
+    text-decoration: underline;
+    color: blue;
+}
+
+
+/* ---------- FAQ ---------- */
+
+li {
+    list-style: none;
+}
+
+li.faq-pergunta {
+    font-weight: 700;
+}
+
+li.faq-pergunta:hover {
+    cursor: pointer;
+}
+
+li.faq-resposta {
+    background: transparent;
+    border: 0;
+}

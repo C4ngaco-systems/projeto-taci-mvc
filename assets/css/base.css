@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cor-background-clara);
+    color: var(--cor-escura);
+    font-family: var(--font-family-secondary);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* container da página */
+.container {
+    padding: 1em;
+}
+
+/* --------- TIPOGRAFIA --------- */
+h1{
+    text-align: center;
+}
+
+.container > h1 {
+    margin-bottom: 1em;
+}
+h2{
+    margin-top: .5em;
+}
+.paragrafo-centro {
+    text-align: center;
+}
+
