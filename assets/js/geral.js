@@ -65,3 +65,47 @@ function mySubmit(){
         document.getElementById('form-login').submit();
     }
   }
+
+/* Alertas formulários */
+
+// function enviarDados(){
+    // var cnpj = document.getElementById("cnpj");
+    // var nomeLoja = document.getElementById("nome-da-loja");
+    // var endereco = document.getElementById("endereco");
+    // var telefone = document.getElementById("telefone");
+    // var celular = document.getElementById("celular");
+    // var responsavel = document.getElementById("responsavel");
+    // var email = document.getElementById("email");
+
+    // if(cnpj.value===""){
+        // alert("Cnpj é obrigatório!");
+        // return false;
+    // }
+    // if(nomeLoja.value===""){
+        // alert("Nome da loja é obrigatório!");
+        // return false;
+    // }
+    // if(endereco.value===""){
+        // alert("Endereço é obrigatório!");
+        // return false;
+    // }
+    // if(telefone.value===""){
+        // alert("Telefone é obrigatório!");
+        // return false;
+    // }
+    // if(celular.value===""){
+        // alert("Celular é obrigatório!");
+        // return false;
+    // }
+    // if(responsavel.value===""){
+        // alert("Nome do responsável é obrigatório!");
+        // return false;
+    // }
+    // if(email.value===""){
+        // alert("E-mail é obrigatório!");
+        // return false;
+    // }
+    // return true;
+
+// }
+
