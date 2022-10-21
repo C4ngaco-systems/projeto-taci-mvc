@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar nova loja</title>
+    <link rel="stylesheet" href="../../assets/bootstrap-5.1.3-dist/css/bootstrap.css" />
+
+</head>
+
+<body class="bg-light">
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../lojas-associadas/lojas-associadas.html">
+                    <img src="../../assets/img/logo-taci-menor.png" class="rounded float-start" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../lojas-associadas/lojas-associadas.html">Lojistas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../aprendizados/home-aprendizado.html">Aprendizados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../dicas-produtos/dicas-produtos-adm.html">Dicas e produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../bonificacoes-aprendizado/home-bonificacao.html">Bonificações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../faq/faq.html">Lojistas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Logout</a>
+                        </li>
+                    </ul>
+        </nav>
+    </header>
+    <section class="container bg-light">
+        <h1>Adicionar nova loja</h1>
+        <div>
+            <button class="d-grid gap-1 col-1.5 mx-auto" onclick="abrirModal2()"><i
+                    class="btn btn-primary"></i><span>Enviar
+                    imagem</span></button>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Cnpj:</label>
+                        <input type="text" class="form-control" id="email" placeholder="00.000.000/0000-000"
+                            maxlength="16">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Nome da loja:</label>
+                        <input type="text" class="form-control" id="nome-da-loja" placeholder="Insira aqui"
+                            maxlength="30">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Endereço</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Endereço 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartamento, hotel, casa, etc.">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Cidade</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputEstado">Estado</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>AC</option>
+                            <option>AL</option>
+                            <option>AM</option>
+                            <option>AP</option>
+                            <option>AM</option>
+                            <option>BA</option>
+                            <option>CE</option>
+                            <option>ES</option>
+                            <option>GO</option>
+                            <option>MA</option>
+                            <option>MT</option>
+                            <option>MS</option>
+                            <option>MG</option>
+                            <option>PA</option>
+                            <option>PB</option>
+                            <option>PR</option>
+                            <option>PE</option>
+                            <option>PI</option>
+                            <option>RJ</option>
+                            <option>RN</option>
+                            <option>RS</option>
+                            <option>RO</option>
+                            <option>RR</option>
+                            <option>SC</option>
+                            <option>SP</option>
+                            <option>SE</option>
+                            <option>TO</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputCEP">Telefone:</label>
+                        <input type="text" class="form-control" id="telefone" placeholder="(00)0000-0000"
+                            maxlength="12">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputCEP">CEP</label>
+                        <input type="text" class="form-control" id="celular" placeholder="(00)0000-0000" maxlength="12">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="responsavel">Responsável:</label>
+                    <input type="text" class="form-control" id="responsavel" maxlength="20">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Clique em mim
+                        </label>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <a href="./lojas-associadas-cadeira-artur.html"><input type="button" class="btn btn-danger"
+                            value="Cancelar"></a>
+                    <a href="./lojas-associadas-cadeira-artur.html"><input type="submit" value="Salvar" id="botao"
+                            class="btn btn-success"></a>
+                </div>
+            </form>
+            <div id="fundo"></div>
+            <a href="./lojas-associadas-cadeira-artur.html">
+                <div id="modal" class="modal" onclick="fecharModal()">
+                    <div class="texto-aviso">
+                        <p>Loja adicionada com sucesso!</p>
+                        <button type="button" class="modal__btn-secondary" style="border: none"><i
+                                class="fas fa-check-circle"></i></button>
+                    </div>
+                </div>
+            </a>
+            <div id="modal2" class="modal" onclick="fecharModal()">
+                <div class="texto-aviso">
+                    <p>Imagem adicionada com sucesso</p>
+                    <button class="modal__btn-secondary" style="border: none"><i
+                            class="fas fa-check-circle"></i></button>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="bg-dark text-center text-white">
+            <p>Powered by C4NGAÇO SYSTEMS</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../../assets/js/geral.js"></script>
+</body>
+
+</html>
