@@ -114,7 +114,9 @@ function enviarDados(){
         alert("Estado deve ser selecionado!");
         return false;
     }
+    alert("Cadastro realizado com sucesso!")
     return true;
+    
 
 }
 
