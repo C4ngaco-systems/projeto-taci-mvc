@@ -110,7 +110,7 @@ function enviarDados(){
         alert("E-mail é obrigatório!");
         return false;
     }
-    if(estado.selectedIndex < 0){
+    if(!this.value){
         alert("Estado deve ser selecionado!");
         return false;
     }
