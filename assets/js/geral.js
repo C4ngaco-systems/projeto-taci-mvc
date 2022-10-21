@@ -68,44 +68,53 @@ function mySubmit(){
 
 /* Alertas formulários */
 
-// function enviarDados(){
-    // var cnpj = document.getElementById("cnpj");
-    // var nomeLoja = document.getElementById("nome-da-loja");
-    // var endereco = document.getElementById("endereco");
-    // var telefone = document.getElementById("telefone");
-    // var celular = document.getElementById("celular");
-    // var responsavel = document.getElementById("responsavel");
-    // var email = document.getElementById("email");
+function enviarDados(){
+    var cnpj = document.getElementById("cnpj");
+    var nomeLoja = document.getElementById("nomeDaLoja");
+    var endereco = document.getElementById("endereco");
+    var cidade = document.getElementById("cidade");
+    var telefone = document.getElementById("telefone");
+    var celular = document.getElementById("celular");
+    var responsavel = document.getElementById("responsavel");
+    var email = document.getElementById("email");
 
-    // if(cnpj.value===""){
-        // alert("Cnpj é obrigatório!");
-        // return false;
-    // }
-    // if(nomeLoja.value===""){
-        // alert("Nome da loja é obrigatório!");
-        // return false;
-    // }
-    // if(endereco.value===""){
-        // alert("Endereço é obrigatório!");
-        // return false;
-    // }
-    // if(telefone.value===""){
-        // alert("Telefone é obrigatório!");
-        // return false;
-    // }
-    // if(celular.value===""){
-        // alert("Celular é obrigatório!");
-        // return false;
-    // }
-    // if(responsavel.value===""){
-        // alert("Nome do responsável é obrigatório!");
-        // return false;
-    // }
-    // if(email.value===""){
-        // alert("E-mail é obrigatório!");
-        // return false;
-    // }
-    // return true;
+    if(cnpj.value===""){
+        alert("Cnpj é obrigatório!");
+        return false;
+    }
+    if(nomeLoja.value===""){
+        alert("Nome da loja é obrigatório!");
+        return false;
+    }
+    if(endereco.value===""){
+        alert("Endereço é obrigatório!");
+        return false;
+    }
+    if(cidade.value===""){
+        alert("Informe a cidade!");
+        return false;
+    }
+    if(telefone.value===""){
+        alert("Telefone é obrigatório!");
+        return false;
+    }
+    if(celular.value===""){
+        alert("Celular é obrigatório!");
+        return false;
+    }
+    if(responsavel.value===""){
+        alert("Nome do responsável é obrigatório!");
+        return false;
+    }
+    if(email.value===""){
+        alert("E-mail é obrigatório!");
+        return false;
+    }
+    if(estado.selectedIndex < 0){
+        alert("Estado deve ser selecionado!");
+        return false;
+    }
+    return true;
 
-// }
+}
 
