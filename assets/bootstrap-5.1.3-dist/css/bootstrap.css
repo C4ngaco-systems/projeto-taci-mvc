@@ -4074,7 +4074,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid pink;
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
