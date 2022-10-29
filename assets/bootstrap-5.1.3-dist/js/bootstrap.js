@@ -5044,3 +5044,14 @@
 
 }));
 //# sourceMappingURL=bootstrap.js.map
+
+//----------------------------------------------------------------------------------
+function desabilitar(valor) {
+  var status = document.getElementById('cnpj').disabled;
+
+  if (valor == 'sim' && !status) {
+    document.getElementById('cnpj').disabled = true;
+  } else {
+    document.getElementById('cnpj').disabled = false;
+  }
+}
