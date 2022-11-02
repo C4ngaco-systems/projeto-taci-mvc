@@ -5084,28 +5084,49 @@ function desabilitar(valor) {
     document.getElementById('nome-loja').disabled = false;
   }
   if (valor == 'sim' && !statusEndereco) {
-    document.getElementById('endereco').disabled =true;
+    document.getElementById('endereco').disabled = true;
   } else {
-    document.getElementById('endereco').disabled =false;
+    document.getElementById('endereco').disabled = false;
   }
   if (valor == 'sim' && !statusTelefone) {
-    document.getElementById('telefone').disabled =true;
+    document.getElementById('telefone').disabled = true;
   } else {
-    document.getElementById('telefone').disabled =false;
+    document.getElementById('telefone').disabled = false;
   }
   if (valor == 'sim' && !statusResponsavel) {
-    document.getElementById('responsavel').disabled =true;
+    document.getElementById('responsavel').disabled = true;
   } else {
-    document.getElementById('responsavel').disabled =false;
+    document.getElementById('responsavel').disabled = false;
   }
   if (valor == 'sim' && !statusCelular) {
-    document.getElementById('celular').disabled =true;
+    document.getElementById('celular').disabled = true;
   } else {
     document.getElementById('celular').disabled = false;
   }
   if (valor == 'sim' && !statusEmail) {
-    document.getElementById('e-mail').disabled =true;
+    document.getElementById('e-mail').disabled = true;
   } else {
     document.getElementById('e-mail').disabled = false;
   }
 }
+
+function enviarDados() {
+  var cnpj = document.getElementById('cnpj');
+  var nomeLoja = document.getElementById('nome-loja');
+  var endereco = document.getElementById('endereco');
+  var telefone = document.getElementById('telefone');
+  var responsavel = document.getElementById('responsavel');
+  var celular = document.getElementById('celular');
+  var email = document.getElementById('e-mail');
+
+  console.log(cnpj.value)
+  console.log(nomeLoja.value)
+  console.log(endereco.value)
+  console.log(telefone.value)
+  console.log(responsavel.value)
+  console.log(celular.value)
+  console.log(email.value)
+  
+}  
+  
+  
