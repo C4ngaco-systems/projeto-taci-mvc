@@ -586,7 +586,6 @@ progress {
 
 .blockquote-footer {
   margin-top: -0.5rem;
-  margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
 }
@@ -2462,7 +2461,7 @@ textarea.form-control-lg {
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
-  text-align: center;
+  text-align: start;
   
 
 }
@@ -4074,7 +4073,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid pink;
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
