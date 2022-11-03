@@ -44,7 +44,9 @@ function desabilitar(valor) {
   }
 }
 
-function enviarDados() {
+function enviarDados(e) {
+  e.preventDefault()
+  // aqui controlaremos o envio futuramente
   var cnpj = document.getElementById("cnpj");
   var nomeLoja = document.getElementById("nome-loja");
   var endereco = document.getElementById("endereco");
@@ -61,3 +63,6 @@ function enviarDados() {
   console.log(celular.value);
   console.log(email.value);
 }
+
+const lojistaForm = document.getElementById('form-lojista');
+lojistaForm.addEventListener('submit', enviarDados);
