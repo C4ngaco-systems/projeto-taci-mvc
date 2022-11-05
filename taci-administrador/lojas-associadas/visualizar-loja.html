@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html class="h-100">
 <html lang="pt-br">
 
 <head>
@@ -10,7 +10,7 @@
     <script src="../../assets/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 </head>
 
-<body class="bg-light ">
+<body class="bg-light h-100 d-flex flex-column">
     <header>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,17 +50,17 @@
         </nav>
     </header>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid bg-light mb-3">
 
         <!-- <input type="text" id="tel"> -->
 
         <form class="needs-validation" novalidate>
             <input class="btn btn-primary 
             btn-sm" type="button" value="Editar Cadastro" onclick="desabilitar('sim')"><p></p>
-            <div class="col-md-5">
+            <div class="form-group">
                 <label for="validationDefault01" class="form-label">Cnpj:</label>
                 <input type="text" class="form-control" id="validationCNPJ" placeholder="00.000.000/0000-00" maxlength="16"
-                    minlength="16" disabled>
+                    minlength="16" required disabled>
 
             </div>
             <div class="form-group">
@@ -75,14 +75,14 @@
             </div>
             <div class="form-group">
                 <label for="validationCity" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="validationCity" required>
+                <input type="text" class="form-control" id="validationCity" required disabled>
                 <div class="invalid-feedback">
                     Insira o a cidade da loja
                 </div>
             </div>
             <div class="form-group col-md-1.5">
                 <label for="validationState" class="form-label">Estado</label>
-                <select id="validationState" class="form-control" required>
+                <select id="validationState" class="form-control" required disabled>
                     <option selected>Selecione</option>
                     <option>AC</option>
                     <option>AL</option>
@@ -121,7 +121,7 @@
             </div>
             <div class="form-group">
                 <label for="validationCEP" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="validationCEP" placeholder="XXXXX-XXX" maxlength="12" required>
+                <input type="text" class="form-control" id="validationCEP" placeholder="XXXXX-XXX" maxlength="12" required disabled>
                 <div class="invalid-feedback">
                     Insira o CEP
                 </div>
@@ -156,7 +156,7 @@
             </div>
         </form>
     </section>
-    <footer class="blockquote-footer">
+    <footer class="mt-auto">
         <div class="bg-dark text-center text-white">
             <p>Powered by C4NGAÇO SYSTEMS</p>
         </div>
