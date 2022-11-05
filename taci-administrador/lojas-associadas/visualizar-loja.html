@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizar Lojas</title>
     <link rel="stylesheet" href="../../assets/bootstrap-5.1.3-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap-personalizado.css">
     <script src="../../assets/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 </head>
 
@@ -55,12 +56,13 @@
         <!-- <input type="text" id="tel"> -->
 
         <form class="needs-validation" novalidate>
-            <input class="btn btn-primary 
-            btn-sm" type="button" value="Editar Cadastro" onclick="desabilitar('sim')"><p></p>
+            <input class="btn btn-primary" 
+            type="button" value="Editar Cadastro" onclick="desabilitar('sim')">
+            <p></p>
             <div class="form-group">
                 <label for="validationDefault01" class="form-label">Cnpj:</label>
-                <input type="text" class="form-control" id="validationCNPJ" placeholder="00.000.000/0000-00" maxlength="16"
-                    minlength="16" required disabled>
+                <input type="text" class="form-control" id="validationCNPJ" placeholder="00.000.000/0000-00"
+                    maxlength="16" minlength="16" required disabled>
 
             </div>
             <div class="form-group">
@@ -121,7 +123,8 @@
             </div>
             <div class="form-group">
                 <label for="validationCEP" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="validationCEP" placeholder="XXXXX-XXX" maxlength="12" required disabled>
+                <input type="text" class="form-control" id="validationCEP" placeholder="XXXXX-XXX" maxlength="12"
+                    required disabled>
                 <div class="invalid-feedback">
                     Insira o CEP
                 </div>
@@ -151,9 +154,9 @@
                 </div>
             </div>
 
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submeter Formulário</button>
-            </div>
+            <input type="button" type="submit" class="btn btn-primary" value="Submeter Formulário">
+
+
         </form>
     </section>
     <footer class="mt-auto">
