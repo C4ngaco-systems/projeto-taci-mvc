@@ -3,51 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar nova loja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/bootstrap-5.1.3-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap-personalizado.css" />
 </head>
 
 <body class="bg-light">
     <header>
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../lojas-associadas/lojas-associadas.html">
-                    <img src="../../assets/img/logo-taci-menor.png" class="rounded float-start" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="../lojas-associadas/lojas-associadas.html">Lojistas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="../aprendizados/home-aprendizado.html">Aprendizados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="../dicas-produtos/dicas-produtos-adm.html">Dicas e produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="../bonificacoes-aprendizado/home-bonificacao.html">Bonificações</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../faq/faq.html">Lojistas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../../index.html">Logout</a>
-                        </li>
-                    </ul>
-        </nav>
+              <a class="navbar-brand" href="#"> <img src="../../assets/img/logo-taci-menor.png" class="rounded float-start" /></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color:black;" > </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav"> 
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../lojas-associadas/index.html">Lojistas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Aprendizados</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Dicas e produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bonificações</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Faq</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                  </li>   
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <section class="container bg-light">
         <h1>Adicionar nova loja</h1>
@@ -55,31 +48,41 @@
             <button class="d-grid gap-1 col-1.5 mx-auto" onclick="abrirModal2()"><i
                     class="btn btn-primary"></i><span>Enviar
                     imagem</span></button>
-            <form id="form-lojista" method="post">
+            <form id="form-lojista" class="needs-validation" novalidate>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="inputEmail4">Cnpj:</label>
-                        <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-000"
-                            maxlength="16">
+                        <label for="validationCNPJ" class="form-label">Cnpj:</label>
+                        <input type="text" class="form-control" id="validationCNPJ" placeholder="00.000.000/0000-000" maxlength="16" required>
+                        <div class="invalid-feedback">
+                            Insira o CNPJ da loja.
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword4">Nome da loja:</label>
-                        <input type="text" class="form-control" id="nome-loja" placeholder="Insira aqui"
-                            maxlength="30">
+                        <label for="validationStoreName" class="form-label">Nome da loja:</label>
+                        <input type="text" class="form-control" id="validationStoreName" placeholder="Insira aqui" maxlength="30" required>
+                        <div class="invalid-feedback">
+                            Insira o nome da loja
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" placeholder="Rua dos Bobos, nº 0">
+                    <label for="validationAdress" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id=validationAdress" placeholder="Rua dos Bobos, nº 0" required>
+                    <div class="invalid-feedback">
+                        Insira o endereço da loja
+                    </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" id="cidade">
+                        <label for="validationCity" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="validationCity" required>
+                        <div class="invalid-feedback">
+                            Insira o a cidade da loja
+                        </div>
                     </div>
                     <div class="form-group col-md-1.5">
-                        <label for="estado">Estado</label>
-                        <select id="estado" class="form-control" required>
+                        <label for="validationState" class="form-label">Estado</label>
+                        <select id="validationState" class="form-control" required>
                             <option selected>Selecione</option>
                             <option>AC</option>
                             <option>AL</option>
@@ -111,22 +114,34 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="telefone">Telefone:</label>
-                        <input type="text" class="form-control" id="telefone" placeholder="(00)0000-0000"
-                            maxlength="12">
+                        <label for="validationTel" class="form-label">Telefone:</label>
+                        <input type="text" class="form-control" id="validationTel" placeholder="(00)0000-0000"
+                            maxlength="12" required>
+                        <div class="invalid-feedback">
+                            Insira o telefone
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="cep">CEP</label>
-                        <input type="text" class="form-control" id="celular" placeholder="(00)0000-0000" maxlength="12">
+                        <label for="validationCEP" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="validationCEP" placeholder="XXXXX-XXX" maxlength="12" required>
+                        <div class="invalid-feedback">
+                            Insira o CEP
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="responsavel">Responsável:</label>
-                    <input type="text" class="form-control" id="responsavel" maxlength="20">
+                    <label for="validationResp" class="form-label">Responsável:</label>
+                    <input type="text" class="form-control" id="validationResp" maxlength="20" required>
+                    <div class="invalid-feedback">
+                        Insira o nome do responsável da loja.
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="e-mail" maxlength="100">
+                    <label for="validationEmail" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="validationEmail" maxlength="100" required>
+                    <div class="invalid-feedback">
+                        O e-mail deve possuir '@'
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="form-check">
@@ -137,8 +152,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="./lojas-associadas-cadeira-artur.html"><input type="button" class="btn btn-danger"
-                            value="Cancelar"></a>
+                    <a href="./index.html"><input type="button" class="btn btn-danger" value="Cancelar"></a>
                     <a href="./lojas-associadas-cadeira-artur.html"><input type="submit" value="Salvar" id="botao"
                             class="btn btn-success"></a>
                 </div>
@@ -161,9 +175,9 @@
                 </div>
             </div>
     </section>
-    <footer class="blockquote-footer">
-        <div class="bg-dark text-center text-white">
-            <p>Powered by C4NGAÇO SYSTEMS</p>
+    <footer >
+        <div class="bg-dark text-center text-white" >
+            <span>Powered by C4NGAÇO SYSTEMS</span>
         </div>
     </footer>
     <script type="text/javascript" src="../../assets/js/geral.js"></script>
