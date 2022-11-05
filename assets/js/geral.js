@@ -1,135 +1,68 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link')
+function desabilitar(valor) {
+  var statusCnpj = document.getElementById("cnpj").disabled;
+  var statusNomeLoja = document.getElementById("nome-loja").disabled;
+  var statusEndereco = document.getElementById("endereco").disabled;
+  var statusTelefone = document.getElementById("telefone").disabled;
+  var statusResponsavel = document.getElementById("responsavel").disabled;
+  var statusCelular = document.getElementById("celular").disabled;
+  var statusEmail = document.getElementById("e-mail").disabled;
 
-navToggle.addEventListener('click', () => document.body.classList.toggle('nav-open'));
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => document.body.classList.remove('nav-open'));
-})
-
-/* Caixa de aviso (ação feita com sucesso)*/
-function fecharModal() {
-    document.getElementById('fundo').style.display = 'none';
-    document.getElementById('modal').style.display = 'none';
-    document.getElementById('modal2').style.display = 'none';
-    document.getElementById('modal3').style.display = 'none';
-}
-
-function abrirModal() {
-    document.getElementById('fundo').style.display = 'block';
-    document.getElementById('modal').style.display = 'grid';
-}
-
-function abrirModal2() {
-    document.getElementById('fundo').style.display = 'block';
-    document.getElementById('modal2').style.display = 'grid';
-}
-
-function modalConfirmacao() {
-    document.getElementById('modal').style.display = 'none';
-    document.getElementById('modal2').style.display = 'grid';
-}
-
-function modalConclusao() {
-    document.getElementById('modal2').style.display = 'none';
-    document.getElementById('modal3').style.display = 'grid';
-}
-
-var inputs = $('input').on('keyup', verificarInputs);
-
-function verificarInputs() {
-    const preenchidos = inputs.get().every(({ value }) => value)
-    $('#botao').prop('disabled', !preenchidos);
-}
-
-/* Colapse do FAQ */
-$('li.faq-resposta').hide();
-$('li.faq-pergunta').click(function() {
-    $(this).next().slideToggle();
-});
-
-/* Ativa o botão de login*/
-function recaptcha_callBack() {
-    var ctaBtn = document.querySelector('.cta-button');
-    ctaBtn.removeAttribute('disabled');
-    ctaBtn.style.cursor = 'pointer';
-    ctaBtn.style.background = "#EB8FA9";
-    ctaBtn.style.color = '#303030'
-}
-
-/* Controle de fluxo do login  */
-function mySubmit(){
-    var action = $('#option').val()
-    if(action !== '') {
-        document.getElementById('form-login').action = action;
-        document.getElementById('form-login').submit();
-    }
+  if (valor == "sim" && !statusCnpj) {
+    document.getElementById("cnpj").disabled = true;
+  } else {
+    document.getElementById("cnpj").disabled = false;
   }
+  if (valor == "sim" && !statusNomeLoja) {
+    document.getElementById("nome-loja").disabled = true;
+  } else {
+    document.getElementById("nome-loja").disabled = false;
+  }
+  if (valor == "sim" && !statusEndereco) {
+    document.getElementById("endereco").disabled = true;
+  } else {
+    document.getElementById("endereco").disabled = false;
+  }
+  if (valor == "sim" && !statusTelefone) {
+    document.getElementById("telefone").disabled = true;
+  } else {
+    document.getElementById("telefone").disabled = false;
+  }
+  if (valor == "sim" && !statusResponsavel) {
+    document.getElementById("responsavel").disabled = true;
+  } else {
+    document.getElementById("responsavel").disabled = false;
+  }
+  if (valor == "sim" && !statusCelular) {
+    document.getElementById("celular").disabled = true;
+  } else {
+    document.getElementById("celular").disabled = false;
+  }
+  if (valor == "sim" && !statusEmail) {
+    document.getElementById("e-mail").disabled = true;
+  } else {
+    document.getElementById("e-mail").disabled = false;
+  }
+}
 
-/* Funções formulários */
+function enviarDados(e) {
+  e.preventDefault()
+  // aqui controlaremos o envio futuramente
+  var cnpj = document.getElementById("cnpj");
+  var nomeLoja = document.getElementById("nome-loja");
+  var endereco = document.getElementById("endereco");
+  var telefone = document.getElementById("telefone");
+  var responsavel = document.getElementById("responsavel");
+  var celular = document.getElementById("celular");
+  var email = document.getElementById("e-mail");
 
-//----------------------------------------------------------------------------------
-// function desabilitar(valor) {
-//     var statusCnpj = document.getElementById('cnpj').disabled;
-//     var statusNomeLoja = document.getElementById('nome-loja').disabled;
-//     var statusEndereco = document.getElementById('endereco').disabled;
-//     var statusTelefone = document.getElementById('telefone').disabled;
-//     var statusResponsavel = document.getElementById('responsavel').disabled;
-//     var statusCelular = document.getElementById('celular').disabled;
-//     var statusEmail = document.getElementById('e-mail').disabled;
+  console.log(cnpj.value);
+  console.log(nomeLoja.value);
+  console.log(endereco.value);
+  console.log(telefone.value);
+  console.log(responsavel.value);
+  console.log(celular.value);
+  console.log(email.value);
+}
 
-//     if (valor == 'sim' && !statusCnpj) {
-//       document.getElementById('cnpj').disabled = true;
-//     } else {
-//       document.getElementById('cnpj').disabled = false;
-//     }
-//     if (valor == 'sim' && !statusNomeLoja) {
-//       document.getElementById('nome-loja').disabled = true;
-//     } else {
-//       document.getElementById('nome-loja').disabled = false;
-//     }
-//     if (valor == 'sim' && !statusEndereco) {
-//       document.getElementById('endereco').disabled = true;
-//     } else {
-//       document.getElementById('endereco').disabled = false;
-//     }
-//     if (valor == 'sim' && !statusTelefone) {
-//       document.getElementById('telefone').disabled = true;
-//     } else {
-//       document.getElementById('telefone').disabled = false;
-//     }
-//     if (valor == 'sim' && !statusResponsavel) {
-//       document.getElementById('responsavel').disabled = true;
-//     } else {
-//       document.getElementById('responsavel').disabled = false;
-//     }
-//     if (valor == 'sim' && !statusCelular) {
-//       document.getElementById('celular').disabled = true;
-//     } else {
-//       document.getElementById('celular').disabled = false;
-//     }
-//     if (valor == 'sim' && !statusEmail) {
-//       document.getElementById('e-mail').disabled = true;
-//     } else {
-//       document.getElementById('e-mail').disabled = false;
-//     }
-//   }
-
-//   function enviarDados() {
-//     var cnpj = document.getElementById('cnpj');
-//     var nomeLoja = document.getElementById('nome-loja');
-//     var endereco = document.getElementById('endereco');
-//     var telefone = document.getElementById('telefone');
-//     var responsavel = document.getElementById('responsavel');
-//     var celular = document.getElementById('celular');
-//     var email = document.getElementById('e-mail');
-
-//     console.log(cnpj.value)
-//     console.log(nomeLoja.value)
-//     console.log(endereco.value)
-//     console.log(telefone.value)
-//     console.log(responsavel.value)
-//     console.log(celular.value)
-//     console.log(email.value)
-
-//   }
+const lojistaForm = document.getElementById('form-lojista');
+lojistaForm.addEventListener('submit', enviarDados);

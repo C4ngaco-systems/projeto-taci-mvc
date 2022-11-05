@@ -48,7 +48,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: 'Source Sans Pro', 'sans-serif', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -101,7 +101,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  text-align: center;
 }
 
 h1, .h1 {
@@ -585,7 +584,8 @@ progress {
 }
 
 .blockquote-footer {
-  margin-top: -0.5rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
 }
@@ -2196,8 +2196,6 @@ progress {
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control {
@@ -2461,14 +2459,10 @@ textarea.form-control-lg {
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
-  text-align: start;
-  
-
 }
 .form-check .form-check-input {
-  float: center;
+  float: left;
   margin-left: -1.5em;
-  margin-bottom: 1rem;
 }
 
 .form-check-input {
@@ -3014,15 +3008,14 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: rgb(53, 53, 53);
-  font-weight: bolder;
-  background-color: #EB8FA9;
-  border-color: #f7d0db;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 .btn-primary:hover {
-  color: #303030;
-  background-color: #f7d0db;
-  border-color: #f7d0db;
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -3928,7 +3921,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #303030;
+  color: #0d6efd;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3938,7 +3931,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #EB8FA9;
+  color: #0a58ca;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -4073,7 +4066,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid pink;
+  border: 1px solid transparent;
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
@@ -4609,17 +4602,16 @@ textarea.form-control-lg {
 }
 
 .card-group > .card {
-  margin-bottom: 0.750rem;
+  margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
   .card-group {
     display: flex;
-
+    flex-flow: row wrap;
   }
   .card-group > .card {
     flex: 1 0 0%;
     margin-bottom: 0;
-    width: 10px;
   }
   .card-group > .card + .card {
     margin-left: 0;
