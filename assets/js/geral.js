@@ -44,25 +44,50 @@ function desabilitar(valor) {
   }
 }
 
-function enviarDados(e) {
-  e.preventDefault()
-  // aqui controlaremos o envio futuramente
-  var cnpj = document.getElementById("cnpj");
-  var nomeLoja = document.getElementById("nome-loja");
-  var endereco = document.getElementById("endereco");
-  var telefone = document.getElementById("telefone");
-  var responsavel = document.getElementById("responsavel");
-  var celular = document.getElementById("celular");
-  var email = document.getElementById("e-mail");
+(function () {
+  'use strict'
 
-  console.log(cnpj.value);
-  console.log(nomeLoja.value);
-  console.log(endereco.value);
-  console.log(telefone.value);
-  console.log(responsavel.value);
-  console.log(celular.value);
-  console.log(email.value);
-}
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
 
-const lojistaForm = document.getElementById('form-lojista');
-lojistaForm.addEventListener('submit', enviarDados);
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+
+        }
+
+        form.classList.add('was-validated')
+
+        if (form.checkValidity() == true){
+          var cnpj = document.getElementById("validationCNPJ");
+          var nomeLoja = document.getElementById("validationStoreName");
+          var endereco = document.getElementById("validationAdress");
+          var cidade = document.getElementById("validationCity");
+          var estado = document.getElementById("validationState")
+          var telefone = document.getElementById("validationTel");
+          var cep = document.getElementById("validationCEP");
+          var responsavel = document.getElementById("validationResp");
+          var email = document.getElementById("validationEmail");
+        
+          console.log(cnpj.value);
+          console.log(nomeLoja.value);
+          console.log(endereco.value);
+          console.log(cidade.value);
+          console.log(estado.value);
+          console.log(telefone.value);
+          console.log(cep.value)
+          console.log(responsavel.value);
+          console.log(email.value);
+    
+          
+          window.location.href = './index.html'; 
+          alert("Loja cadastrada com sucesso!");  
+        }
+        
+      }, false)
+    })
+})()
