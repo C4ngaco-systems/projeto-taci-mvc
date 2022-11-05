@@ -48,7 +48,7 @@
             <button class="d-grid gap-1 col-1.5 mx-auto" onclick="abrirModal2()"><i
                     class="btn btn-primary"></i><span>Enviar
                     imagem</span></button>
-            <form id="form-lojista" class="needs-validation" novalidate>
+            <form class="needs-validation" novalidate>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="validationCNPJ" class="form-label">Cnpj:</label>
@@ -128,27 +128,34 @@
                             Insira o CEP
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="validationResp" class="form-label">Responsável:</label>
-                    <input type="text" class="form-control" id="validationResp" maxlength="20" required>
-                    <div class="invalid-feedback">
-                        Insira o nome do responsável da loja.
+                    <div class="form-group">
+                        <label for="validationResp" class="form-label">Responsável:</label>
+                        <input type="text" class="form-control" id="validationResp" maxlength="20" required>
+                        <div class="invalid-feedback">
+                            Insira o nome do responsável da loja.
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="validationEmail" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control" id="validationEmail" maxlength="100" required>
-                    <div class="invalid-feedback">
-                        O e-mail deve possuir '@'
+                    <div class="form-group">
+                        <label for="validationCelular" class="form-label">Celular</label>
+                        <input type="text" class="form-control" id="validationCelular" placeholder="(00)-00000-0000" maxlength="12" required>
+                        <div class="invalid-feedback">
+                            Insira o Celular
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                        <label class="form-check-label" for="gridCheck">
-                            Clique em mim
-                        </label>
+                    <div class="form-group">
+                        <label for="validationEmail" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="validationEmail" maxlength="100" required>
+                        <div class="invalid-feedback">
+                            O e-mail deve possuir '@'
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">
+                                Clique em mim
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="text-center">

@@ -54,46 +54,92 @@
 
         <!-- <input type="text" id="tel"> -->
 
-        <form id="form-lojista">
+        <form class="needs-validation" novalidate>
             <input class="btn btn-primary 
             btn-sm" type="button" value="Editar Cadastro" onclick="desabilitar('sim')"><p></p>
             <div class="col-md-5">
                 <label for="validationDefault01" class="form-label">Cnpj:</label>
-                <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="16"
+                <input type="text" class="form-control" id="validationCNPJ" placeholder="00.000.000/0000-00" maxlength="16"
                     minlength="16" disabled>
 
             </div>
-            <div class="col-md-5">
+            <div class="form-group">
                 <label for="validationDefault02" class="form-label">Nome da Loja:</label>
-                <input type="text" class="form-control" id="nome-loja" maxlength="30" required disabled>
+                <input type="text" class="form-control" id="validationStoreName" maxlength="30" required disabled>
 
             </div>
-            <div class="col-md-5">
+            <div class="form-group">
                 <label for="validationDefault03" class="form-label">Endereço:</label>
-                <input type="text" class="form-control" id="endereco" required disabled>
+                <input type="text" class="form-control" id="validationAdress" required disabled>
 
             </div>
-            <div class="col-md-5">
-                <label for="validationDefault04" class="form-label">Telefone:</label>
-                <input type="tel" class="form-control" id="telefone" placeholder="Ex:(81) 3331-2512" minlength="10"
+            <div class="form-group">
+                <label for="validationCity" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="validationCity" required>
+                <div class="invalid-feedback">
+                    Insira o a cidade da loja
+                </div>
+            </div>
+            <div class="form-group col-md-1.5">
+                <label for="validationState" class="form-label">Estado</label>
+                <select id="validationState" class="form-control" required>
+                    <option selected>Selecione</option>
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AM</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Telefone:</label>
+                <input type="tel" class="form-control" id="validationTel" placeholder="Ex:(81) 3331-2512" minlength="10"
                     maxlength="10" required disabled>
 
             </div>
-            <div class="col-md-5">
+            <div class="form-group">
+                <label for="validationCEP" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="validationCEP" placeholder="XXXXX-XXX" maxlength="12" required>
+                <div class="invalid-feedback">
+                    Insira o CEP
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="validationDefault05" class="form-label">Responsável:</label>
-                <input type="text" class="form-control" id="responsavel" required disabled>
+                <input type="text" class="form-control" id="validationResp" required disabled>
 
             </div>
-            <div class="col-md-5">
+            <div class="form-group">
                 <label for="validationDefault06" class="form-label">Celular:</label>
-                <input type="tel" class="form-control" id="celular" data-inputmask="'alias': '(99)9999-9999'"
+                <input type="tel" class="form-control" id="validationCelular" data-inputmask="'alias': '(99)9999-9999'"
                     maxlength="11" minlength="11" required disabled>
 
             </div>
-            <div class="col-md-5">
+            <div class="form-group">
                 <label for="validationDefault07" class="form-label">E-mail:</label>
-                <input type="email" class="form-control" id="e-mail" maxlength="100" required disabled>
-
+                <input type="email" class="form-control" id="validationEmail" maxlength="100" required disabled>
             </div>
 
             <div class="col-12">
@@ -115,7 +161,7 @@
             <p>Powered by C4NGAÇO SYSTEMS</p>
         </div>
     </footer>
-    <script src="../../assets/js/geral.js"></script>
+    <script type="text/javascript" src="../../assets/js/geral.js"></script>
 </body>
 
 </html>
