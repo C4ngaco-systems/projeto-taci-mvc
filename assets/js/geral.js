@@ -6,6 +6,9 @@ function desabilitar(valor) {
   var statusResponsavel = document.getElementById("validationResp").disabled;
   var statusCelular = document.getElementById("validationCelular").disabled;
   var statusEmail = document.getElementById("validationEmail").disabled;
+  var statusCidade = document.getElementById("validationCity").disabled;
+  var statusEstado = document.getElementById("validationState").disabled;
+  var statusCep = document.getElementById("validationCEP").disabled;
 
   if (valor == "sim" && !statusCnpj) {
     document.getElementById("validationCNPJ").disabled = true;
@@ -41,6 +44,21 @@ function desabilitar(valor) {
     document.getElementById("validationEmail").disabled = true;
   } else {
     document.getElementById("validationEmail").disabled = false;
+  }
+  if (valor == "sim" && !statusCidade) {
+    document.getElementById("validationCity").disabled = true;
+  } else {
+    document.getElementById("validationCity").disabled = false;
+  }
+  if (valor == "sim" && !statusCidade) {
+    document.getElementById("validationState").disabled = true;
+  } else {
+    document.getElementById("validationState").disabled = false;
+  }
+  if (valor == "sim" && !statusCep) {
+    document.getElementById("validationCEP").disabled = true;
+  } else {
+    document.getElementById("validationCEP").disabled = false;
   }
 }
 

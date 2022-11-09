@@ -10,3 +10,24 @@ card-MT{
 footer{
     margin-top: 20px;
 }
+
+/*Ajuste botão editar cadastro e submeter formulário*/
+
+.btn-primary {
+    margin-top: 0.5rem;
+    background-color: #EB8FA9;
+    border-color: #eb547f;
+    color: #fff;
+    
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #eb547f;
+    border-color: #EB8FA9;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: #EB8FA9;
+    border-color: #eb547f;
+    box-shadow: 0 0 0 0.25rem #eb547f;
+  }
